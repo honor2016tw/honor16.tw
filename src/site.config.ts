@@ -88,33 +88,32 @@ export const theme: ThemeUserConfig = {
 export const integ: IntegrationUserConfig = {
   // [Links]
   // https://astro-pure.js.org/docs/integrations/links
-  links: {
-    enable: false,
-    // Friend logbook
-    logbook: [
-      { date: '2025-03-16', content: 'Is there a leakage?' },
-      { date: '2025-03-16', content: 'A leakage of what?' },
-      { date: '2025-03-16', content: 'I have a full seat of water, like, full of water!' },
-      { date: '2025-03-16', content: 'Must be the water.' },
-      { date: '2025-03-16', content: "Let's add that to the words of wisdom." }
-    ],
-    // Yourself link info
-    applyTip: [
-      { name: 'Name', val: theme.title },
-      { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'https://astro-pure.js.org/' },
-      { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
-    ],
-    // Cache avatars in `public/avatars/` to improve user experience.
-    cacheAvatar: false
-  },
+  // links: {
+  //   enable: false,
+  //   // Friend logbook
+  //   logbook: [
+  //     { date: '2025-03-16', content: 'Is there a leakage?' },
+  //     { date: '2025-03-16', content: 'A leakage of what?' },
+  //     { date: '2025-03-16', content: 'I have a full seat of water, like, full of water!' },
+  //     { date: '2025-03-16', content: 'Must be the water.' },
+  //     { date: '2025-03-16', content: "Let's add that to the words of wisdom." }
+  //   ],
+  //   // Yourself link info
+  //   applyTip: [
+  //     { name: 'Name', val: theme.title },
+  //     { name: 'Desc', val: theme.description || 'Null' },
+  //     { name: 'Link', val: 'https://astro-pure.js.org/' },
+  //     { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+  //   ],
+  //   // Cache avatars in `public/avatars/` to improve user experience.
+  //   cacheAvatar: false
+  // },
   // [Search]
   pagefind: true,
   // Add a random quote to the footer (default on homepage footer)
   // See: https://astro-pure.js.org/docs/integrations/advanced#web-content-render
   // [Quote]
   quote: {
-    enable: false,
     // - Hitokoto
     // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
     // server: 'https://v1.hitokoto.cn/?c=i',
@@ -171,7 +170,7 @@ export const integ: IntegrationUserConfig = {
 
 export const terms: CardListData = {
 
-}
+  }
 
 const config = { ...theme, integ } as Config
 export default config

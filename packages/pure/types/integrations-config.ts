@@ -1,10 +1,10 @@
 import { z } from 'astro/zod'
 
-import { FriendLinksSchema } from '../schemas/links'
+// import { FriendLinksSchema } from '../schemas/links'
 
 export const IntegrationConfigSchema = () =>
   z.object({
-    links: FriendLinksSchema(),
+    // links: FriendLinksSchema(),
 
     /**
      * Define whether default site search provider Pagefind is enabled.
