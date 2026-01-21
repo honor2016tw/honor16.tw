@@ -25,6 +25,7 @@ import { Icon } from '../user'
           config.header.menu.map((item) => (
             <a
               href={item.link}
+              download={item.link?.endsWith('.pdf')}
               class='w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary sm:w-fit sm:px-3'
               aria-label='Nav menu item'
             >

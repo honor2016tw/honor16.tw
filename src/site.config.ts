@@ -1,13 +1,9 @@
 import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } from 'astro-pure/types'
 
 export const theme: ThemeUserConfig = {
-  // [Basic]
-  /** Title for your website. Will be used in metadata and as browser tab title. */
-  title: 'Astro Theme Pure',
-  /** Will be used in index page & copyright declaration */
-  author: 'Pure Lab',
-  /** Description metadata for your website. Can be used in page metadata. */
-  description: 'Stay hungry, stay foolish',
+  title: 'Hi there, Honor speaking',
+  author: 'Cheng-Ju (Sam) Shih',
+  description: 'Vi Veri Veniversum Vivus Vici.',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** The default social card image for your site which should be a path to an image in the `public/` directory. */
@@ -24,7 +20,6 @@ export const theme: ThemeUserConfig = {
       year: 'numeric'
     }
   },
-  /** Set a logo image to show in the homepage. */
   logo: {
     src: '/src/assets/avatar.png',
     alt: 'Avatar'
@@ -50,7 +45,8 @@ export const theme: ThemeUserConfig = {
     menu: [
       { title: 'Blog', link: '/blog' },
       { title: 'Projects', link: '/projects' },
-      { title: 'About', link: '/about' }
+      { title: 'About', link: '/about' },
+      { title: 'CV', link: '/cv/cv.pdf' }
     ]
   },
 
