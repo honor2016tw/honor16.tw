@@ -169,8 +169,9 @@ export const integ: IntegrationUserConfig = {
 }
 
 export const terms: CardListData = {
-
-  }
+  title: 'Terms',
+  list: [{ title: 'Privacy', link: '/terms/privacy' }]
+}
 
 const config = { ...theme, integ } as Config
 export default config
