@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import type { MarkdownHeading } from 'astro'
 
 import { Button, Collapse, Icon } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
@@ -10,12 +11,12 @@ import alipay from '@/assets/alipay-qrcode.jpg'
 import KeyIcon from '@/assets/icons/key.svg'
 import wechat from '@/assets/wechat-qrcode.jpg'
 
-const headings = [
-  { depth: 2, slug: 'programs', text: 'Programs' },
-  { depth: 2, slug: 'learnings', text: 'Learnings' },
-  { depth: 2, slug: 'others', text: 'Others' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
-  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
+const headings: MarkdownHeading[] = [
+  // { depth: 2, slug: 'programs', text: 'Programs' },
+  // { depth: 2, slug: 'learnings', text: 'Learnings' },
+  // { depth: 2, slug: 'others', text: 'Others' },
+  // { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
+  // { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
 ]
 ---
 

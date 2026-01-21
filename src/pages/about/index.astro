@@ -1,10 +1,11 @@
 ---
+import type { MarkdownHeading } from 'astro'
 import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 
-const headings = [
+const headings: MarkdownHeading[] = [
   // { depth: 2, slug: 'hobbies', text: 'Hobbies' },
   // { depth: 2, slug: 'tools', text: 'Tools' },
   // { depth: 2, slug: 'social-networks', text: 'Social Networks' },
