@@ -8,15 +8,14 @@ import { cn } from 'astro-pure/utils'
 interface Props {
   class?: string
   title: string
-  tools: {
+  skill: {
     name: string
-    description: string
     href: string
     icon: Promise<typeof import('*.svg?raw')> | ImageMetadata
   }[]
 }
 
-const { class: className, title, tools, ...props } = Astro.props
+const { class: className, title, skill, ...props } = Astro.props
 
 function isImageMetadata(obj: unknown): obj is ImageMetadata {
   return typeof obj === 'object' && obj !== null && 'src' in obj
@@ -28,26 +27,25 @@ function isImageMetadata(obj: unknown): obj is ImageMetadata {
   {...props}
 >
   <div class='m-0 px-2 text-lg font-medium'>{title}</div>
-  <div class='grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2'>
+  <div class='grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-4'>
     {
-      tools.map((tool) => (
+      skill.map((skill) => (
         <a
           class='group relative text-sm leading-normal no-underline'
-          href={tool.href}
-          id={tool.name}
+          href={skill.href}
+          id={skill.name}
           target='_blank'
         >
           <div class='flex items-center gap-x-3 rounded-lg border border-transparent px-1.5 py-1 transition-colors hover:border-border hover:bg-muted'>
-            {tool.darkIcon ? (
-              <>
-                {isImageMetadata(tool.icon) ? (
-                {isImageMetadata(tool.icon) ? (
-                  <div class='size-10 rounded-lg bg-card p-2'>
-                    <Image src={tool.icon} alt={tool.name} class='h-full w-full object-contain' />
-                  </div>
-                ) : (
-                  <Svg src={tool.icon} class='size-10 rounded-lg bg-card fill-foreground p-2' />
-                )}
+            {isImageMetadata(skill.icon) ? (
+              <div class='size-10 rounded-lg bg-card p-2'>
+                <Image src={skill.icon} alt={skill.name} class='h-full w-full object-contain' />
+              </div>
+            ) : (
+              <Svg src={skill.icon} class='size-10 rounded-lg bg-card fill-foreground p-2' />
+            )}
+            <div class='z-20 flex flex-col'>
+              <div class='font-medium text-foreground'>{skill.name}</div>
             </div>
           </div>
         </a>

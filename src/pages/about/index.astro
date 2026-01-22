@@ -4,10 +4,11 @@ import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
+import SkillSection from '@/components/about/SkillSection.astro'
 
 const headings: MarkdownHeading[] = [
-  // { depth: 2, slug: 'hobbies', text: 'Hobbies' },
-  // { depth: 2, slug: 'tools', text: 'Tools' },
+  { depth: 2, slug: 'education', text: 'Education' },
+  { depth: 2, slug: 'skills', text: 'Skills' },
   // { depth: 2, slug: 'social-networks', text: 'Social Networks' },
   // { depth: 2, slug: 'gossips', text: 'Gossips' },
   // { depth: 2, slug: 'about-blog', text: 'About Blog' }
@@ -21,6 +22,30 @@ const headings: MarkdownHeading[] = [
   </p>
 
 
+  {/* education */}
+  <h2 id='education'>Education</h2>
+  <Collapse title='National Taiwan Normal University (2023 - Present)'>
+    <ul>
+      <li>
+        B.S. in <strong><i>Electrical Engineering.</i></strong>
+      </li>
+      <li>
+        Double Major in <strong><i>Computer Science</i></strong>
+      </li>
+      <li>
+        <strong><i>Program of Finance</i></strong> 
+      </li>
+    </ul>
+  </Collapse>
+
+  <Collapse title='National Taiwan University (2022 - 2023)'>
+    <ul>
+      <li>
+        B.S. in <strong><i>Bioenvironmental Systems Engineering</i></strong>
+      </li>
+    </ul>
+  </Collapse>
+
   {/* general-talk */}
   <!-- <h2 id='hobbies'>Hobbies</h2>
   <ul>
@@ -33,6 +58,38 @@ const headings: MarkdownHeading[] = [
     <li>Impetus fuisset ullamcorper pri cu, his posse iisque ad, aliquam honestatis usu id.</li>
   </ul> -->
 
+  {/* skills */}
+  <h2 id='skills'>Skills</h2>
+  <SkillSection
+    title='Languages'
+    skill={[
+      {
+        name: 'JavaScript',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+        icon: import('@/assets/skills/javascript.svg?raw'),
+      },
+      {
+        name: 'TypeScript',
+        href: 'https://www.typescriptlang.org/',
+        icon: import('@/assets/skills/typescript.svg?raw'),
+      },
+      {
+        name: 'Python',
+        href: 'https://www.python.org/',
+        icon: import('@/assets/skills/python.svg?raw'),
+      },
+      {
+        name: 'C/C++',
+        href: 'https://isocpp.org/',
+        icon: import('@/assets/skills/cpp.svg?raw'),
+      },
+      {
+        name: 'Golang',
+        href: 'https://golang.org/',
+        icon: import('@/assets/skills/go.svg?raw'),
+      }
+    ]}
+  />
   {/* tools */}
   <!-- <h2 id='tools'>Tools</h2>
   <p>Current support tools as follow:</p>
