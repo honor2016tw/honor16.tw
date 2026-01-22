@@ -5,15 +5,12 @@
 {/* Use inline mode to quick load color, which can avoid splash */}
 <script is:inline>
   function simpleSetTheme() {
-    let theme = localStorage.getItem('theme')
-    // If undefined or 'system', get from system
-    if (!theme || theme === 'system') {
-      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    }
-    document.documentElement.classList.toggle('dark', theme === 'dark')
+    // Force light theme only
+    const theme = 'light'
+    document.documentElement.classList.remove('dark')
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', theme === 'dark' ? '#0B0B10' : '#FCFCFD')
+      ?.setAttribute('content', '#FCFCFD')
   }
   simpleSetTheme()
   document.addEventListener('astro:page-load', () => simpleSetTheme())
