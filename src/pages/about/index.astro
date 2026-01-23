@@ -9,7 +9,7 @@ import SkillSection from '@/components/about/SkillSection.astro'
 const headings: MarkdownHeading[] = [
   { depth: 2, slug: 'education', text: 'Education' },
   { depth: 2, slug: 'skills', text: 'Skills' },
-  // { depth: 2, slug: 'social-networks', text: 'Social Networks' },
+  { depth: 2, slug: 'honors-and-awards', text: 'Honors and Awards' },
   // { depth: 2, slug: 'gossips', text: 'Gossips' },
   // { depth: 2, slug: 'about-blog', text: 'About Blog' }
 ]
@@ -17,17 +17,23 @@ const headings: MarkdownHeading[] = [
 
 <PageLayout title='About' {headings} comment>
   <p>
-    I'm <strong>Cheng-Ju (Sam) Shih</strong>, an undergraduate student majoring <strong>Electrical Engineering</strong>, with double major in <strong>Computer Science</strong> and <strong>Program of finance</strong> at National Taiwan Normal University.
-
+    I'm <strong>Cheng-Ju (Sam) Shih</strong>, also known as <strong>Honor</strong> (handle: <strong>honor2016tw</strong>), an undergraduate student majoring <strong>Electrical Engineering</strong>, with double major in <strong>Computer Science</strong> and <strong>Program of finance</strong> at National Taiwan Normal University.
   </p>
 
+  <p>
+    My interests mainly lie in the fields of <strong>Cybersecurity</strong>, <strong>Embedded Systems</strong>, <strong>Computer Vision</strong>, <strong>Financial Technology</strong> and <strong>Full Stack Development</strong>.
+  </p>
+
+  <p>
+    I enjoy participating in various competitions like: <strong>CTF(Capture The Flag, Competition for Cybersecurity)</strong>, <strong>hackathons</strong>
+  </p>
 
   {/* education */}
   <h2 id='education'>Education</h2>
   <Collapse title='National Taiwan Normal University (2023 - Present)'>
     <ul>
       <li>
-        B.S. in <strong><i>Electrical Engineering.</i></strong>
+        B.S. in <strong><i>Electrical Engineering</i></strong>
       </li>
       <li>
         Double Major in <strong><i>Computer Science</i></strong>
@@ -90,6 +96,30 @@ const headings: MarkdownHeading[] = [
       }
     ]}
   />
+
+  {/* honors-and-awards */}
+  <h2 id='honors-and-awards'>Honors and Awards</h2>
+  <Collapse title='CTF Achievements'>
+    <Timeline
+      events={[
+        {
+          date: '2024-05-18',
+          content: ''
+        }
+      ]}
+    />
+  </Collapse>
+
+  <Collapse title='Hackathon Achievements'>
+    <Timeline
+      events={[
+        {
+          date: '2024-05-18',
+          content: ''
+        }
+      ]}
+    />
+  </Collapse>
   {/* tools */}
   <!-- <h2 id='tools'>Tools</h2>
   <p>Current support tools as follow:</p>
