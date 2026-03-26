@@ -7,6 +7,7 @@ import ToolSection from '@/components/about/ToolSection.astro'
 import SkillSection from '@/components/about/SkillSection.astro'
 
 const headings: MarkdownHeading[] = [
+  { depth: 2, slug: 'experience', text: 'Experience' },
   { depth: 2, slug: 'education', text: 'Education' },
   { depth: 2, slug: 'skills', text: 'Skills' },
   { depth: 2, slug: 'honors-and-awards', text: 'Honors and Awards' },
@@ -27,6 +28,23 @@ const headings: MarkdownHeading[] = [
   <p>
     I enjoy participating in various competitions like: <strong>CTF(Capture The Flag, Competition for Cybersecurity)</strong>, <strong>hackathons</strong>
   </p>
+
+  {/* experience */}
+  <h2 id='experience'>Experience</h2>
+  <Collapse title='Undergrad Researcher @ Network Security Lab (NSLab), CSIE, National Taiwan University'>
+    <ul>
+      <li>
+        Advisor: <strong><i> Prof. Hsu-Chun Hsiao</i></strong>
+      </li>
+    </ul>
+  </Collapse>
+  <Collapse title='Research Assistant @ CIRLab, EE, National Taiwan Normal University'>
+    <ul>
+      <li>
+        Advisor: <strong><i> Prof. Chen-Chien James Hsu</i></strong>
+      </li>
+    </ul>
+  </Collapse>
 
   {/* education */}
   <h2 id='education'>Education</h2>
